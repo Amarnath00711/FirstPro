@@ -1,0 +1,108 @@
+{% extends 'indexuser.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+    
+<section class="breadcrumb-section set-bg" data-setbg="{% static 'userapps/img/breadcrumb.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Vegetable’s Category</h2>
+                    <div class="breadcrumb__option">
+                        <a href="./index.html">Home</a>
+                        <a href="./index.html">Vegetables</a>
+                        <span>Vegetable’s Package</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	<!-- Start Header Area -->
+	
+	<!-- End Header Area -->
+
+	<!-- Start Banner Area -->
+	<section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+                    <div class="col">
+					 <h1>Login/Register</h1>
+					</div> 
+					<nav class="d-flex align-items-center">
+						<div class="row">	
+							<div class="col">
+							 <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+							</div>
+							<div class="col"> 
+							  <a href="{% url 'login' %}">Login<span class="lnr lnr-arrow-right"></span></a>
+							</div> 
+						 </div>	
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src="{% static 'userapps/img/welcome.png' %}" alt="">
+						<h3>Welcome to Dailymart</h3>
+						
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3>Signin in to enter</h3>
+						<br>
+						<form class="row login_form" action="{% url 'loginusing' %}" method="post" id="contactForm" novalidate="novalidate">
+							{% csrf_token %}
+							<div class="col-md-12 form-group">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required>
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="username" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" required>
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" type="password" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" required>
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" type="password" id="password" name="password" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'" required>
+							</div>
+							
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number '" required>
+							</div>
+							 
+							<div class="col-md-12 form-group">
+								<div class="creat_account">
+									
+								</div>
+							</div>
+							<div class="col-md-12 form-group">
+								<button type="submit" value="submit" class="primary-btn">Sign in</button>
+								<a href="#">Signin to enter</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+	<!-- start footer Area -->
+
+{% endblock content %}

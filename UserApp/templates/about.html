@@ -1,0 +1,85 @@
+{% extends 'indexuser.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MOVIESHUB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            {% comment %} margin: 20px;
+            padding: 20px; {% endcomment %}
+        }
+
+        h1 {
+            color: #ff4500; /* Orange-Red color */
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        #team-section {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<center>
+<body>
+     <br> 
+     <br>
+     <br>
+     
+
+        <header>
+            <h1>DailyMart</h1>
+            <p>Your Daily Shopping Destination</p>
+        </header>
+    
+        <main>
+            <h2>About Us</h2>
+            <p>Welcome to DailyMart, your go-to online store for all your daily needs. We are committed to providing
+                high-quality products, a seamless shopping experience, and excellent customer service.</p>
+    
+            <h2>Our Mission</h2>
+            <p>At DailyMart, our mission is to simplify and enhance your daily life by offering a wide range of
+                products at competitive prices. We strive to make shopping convenient, affordable, and enjoyable for
+                everyone.</p>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="{% static 'userapps/img/duplogo.png' %}" style="background-image: url(&quot;img/featured/feature-7.jpg&quot;);">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            <h2>Why Choose DailyMart?</h2>
+            <p>1. <strong>Wide Variety:</strong> Explore a vast selection of products from groceries to electronics,
+                all in one place.</p>
+            <p>2. <strong>Quality Assurance:</strong> We ensure that every product meets our high standards of
+                quality.</p>
+            <p>3. <strong>Convenience:</strong> Shop from the comfort of your home, and we'll deliver your orders
+                right to your doorstep.</p>
+    
+            <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or feedback, feel free to reach out to us:</p>
+            <p>Email: info@dailymart.com</p>
+            <p>Phone: (555) 123-4567</p>
+        </main>
+    
+    
+
+</body>
+</center>
+
+</html>
+{% endblock content %}	

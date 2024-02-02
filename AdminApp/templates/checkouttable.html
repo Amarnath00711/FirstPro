@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+<center><div>
+    <div class="col-md-6"> 
+    <div class="card-body table-responsive p-0">
+    <table class="table table-hover text-nowrap">
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Product Name</th>
+    <th>Product Image</th>
+    <th>Quantity</th>
+    <th>Total</th>
+    
+
+    </tr>
+    </thead>
+         <tbody>
+
+      {% for q in data4 %}
+
+
+         <tr>
+        
+        <td>{{ q.id}}</td>
+        <td>{{ q.cartid.userid.username}}</td>
+        <td>{{ q.cartid.userid.email}}</td>
+        <td>{{ q.cartid.userid.phone}}</td>
+        <td>{{ q.cartid.productid.moviename}}</td>
+        <td><img style="height:50px;width:50px;" src="{{q.cartid.productid.image.url}}"></td>
+        <td>{{ q.cartid.quantity}}</td>
+        <td>{{q.cartid.total}}</td>    
+        
+       
+        
+        
+    
+       </tr>
+      {% endfor %}
+         </tbody>
+    </table>
+    </div>
+    
+   </div>
+    
+</div>
+</center>
+{% endblock %} 

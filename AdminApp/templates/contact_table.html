@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+<div class="col-12">
+    <div class="card">
+    <div class="card-header">
+    <h3 class="card-title">Responsive Hover Table</h3>
+    <div class="card-tools">
+    <div class="input-group input-group-sm" style="width: 150px;">
+    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+    <div class="input-group-append">
+    <button type="submit" class="btn btn-default">
+    <i class="fas fa-search"></i>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="card-body table-responsive p-0">
+      <center>
+    <table class="table table-hover text-nowrap">
+    <thead>
+    
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Message</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in contacting %}
+     
+    
+      <tr>
+        
+        <td>{{i.id}}</td>
+        <td>{{i.name }}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.subject}}</td>
+        <td>{{i.message}}</td>
+        
+        <td><a href="{% url 'editing' id=i.id %}" ><button type="button" class="btn btn-success">Edit</button></a></td>
+        <td><a href="{% url 'deleting' id=i.id %}"><button type="button" class="btn btn-success">Delete</button></a></td>
+        
+        
+         
+    
+      </tr>
+    
+    {% endfor %}
+    </tbody>
+    </table>
+    </center>
+    </div>
+  
+    
+    </div>
+   
+    </div>
+{% endblock %}

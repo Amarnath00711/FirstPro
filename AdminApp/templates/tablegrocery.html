@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+<center><div>
+    <div class="col-md-6"> 
+    <div class="card-body table-responsive p-0">
+    <table class="table table-hover text-nowrap">
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Grocery Name</th>
+    <th>Grocery image</th>
+    <th>Grocery Category</th>
+    <th>Grocery Type</th>
+    <th>Grocery Division</th>
+    <th>Price</th>
+    <th></th>
+    <th>Edit</th>
+    <th>Delete</th>
+
+    </tr>
+    </thead>
+         <tbody>
+
+      {% for q in bata %}
+
+
+         <tr>
+        
+        <td>{{ q.id}}</td>
+        <td>{{ q.moviename}}</td>
+        <td><img style="height:50px;width:50px;" src="{{q.image.url}}"></td>
+        <td>{{ q.moviecategory}}</td>
+        <td>{{ q.movielang}}</td>
+        <td>{{ q.moviegenre}}</td>
+        <td>{{ q.price}}</td>
+        
+        <td><a href="{% url 'edition' id=q.id %}" ><button type="button" class="btn btn-success">Edit</button></a></td>
+        <td><a href="{% url 'deletion' id=q.id %}"><button type="button" class="btn btn-success">Delete</button></a></td>
+        
+        
+    
+       </tr>
+      {% endfor %}
+         </tbody>
+    </table>
+    </div>
+    
+   </div>
+    
+</div>
+</center>
+{% endblock %} 
